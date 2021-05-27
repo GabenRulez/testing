@@ -32,9 +32,8 @@ jobs:
           ls ${{ github.workspace }}
           rm -r ${{ github.workspace }}/README.md
           ls ${{ github.workspace }}
-          zip -r cleanedUp.zip ${{ github.workspace }}
-      - name: test2
-        run: cat cleanedUp.zip
+          cd ${{ github.workspace }}
+          zip -r cleanedUp.zip ./*
       - name: Release snapshot better
         id: release-snapshot-better
         uses: softprops/action-gh-release@v1
