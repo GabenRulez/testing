@@ -30,7 +30,7 @@ jobs:
       - name: Filters unwanted trash
         run: |
           ls ${{ github.workspace }}
-          rm -r ${{ github.workspace }}/README.md
+          rm -r ${{ github.workspace }}/test
           ls ${{ github.workspace }}
           cd ${{ github.workspace }}
           zip -r cleanedUp.zip ./*
